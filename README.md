@@ -10,10 +10,9 @@ CRIAR PERSONAGENS: POST http://localhost:8080/personagens
         "moedas": 150
     }
 
----------------------------------------------------------------------
 LISTAR PERSONAGENS: GET http://localhost:8080/personagens
----------------------------------------------------------------------
+
 LISTAR MAGOS: http://localhost:8080/personagens?classe=mago
----------------------------------------------------------------------
+
 LISTAR GUERREIROS: http://localhost:8080/personagens?classe=guerreiro
----------------------------------------------------------------------
+
