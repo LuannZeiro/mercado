@@ -16,3 +16,4 @@ LISTAR MAGOS: http://localhost:8080/personagens?classe=mago
 
 LISTAR GUERREIROS: http://localhost:8080/personagens?classe=guerreiro
 
+PESQUISAR TIPO ITEM: http://localhost:8080/itens?tipo=arma
