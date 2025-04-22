@@ -23,7 +23,7 @@ public class Personagem {
     private String nome;
 
     @Column(nullable = false)
-    private String classe; // guerreiro, mago, arqueiro
+    private String classe;
 
     @Column(nullable = false)
     private int nivel;
