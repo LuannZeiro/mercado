@@ -23,13 +23,11 @@ public class ItemController {
     private final ItemRepository itemRepo;
     private final PersonagemRepository personagemRepo;
 
-    // Construtor
     public ItemController(ItemRepository itemRepo, PersonagemRepository personagemRepo) {
         this.itemRepo = itemRepo;
         this.personagemRepo = personagemRepo;
     }
 
-    // Listar itens com filtros
     @GetMapping
     public List<Item> listar(@RequestParam(required = false) String nome,
             @RequestParam(required = false) String tipo,
@@ -47,7 +45,6 @@ public class ItemController {
         return itemRepo.findAll();
     }
 
-    // Criar um novo item, associando a um personagem (dono)
     @PostMapping
     public Item criar(@RequestBody Item item) {
         if (item.getDono() != null && item.getDono().getId() != null) {
@@ -60,20 +57,17 @@ public class ItemController {
         return itemRepo.save(item);
     }
 
-    // Buscar um item pelo ID
     @GetMapping("/{id}")
     public Item buscarPorId(@PathVariable Long id) {
         return itemRepo.findById(id).orElseThrow(() -> new RuntimeException("Item não encontrado"));
     }
 
-    // Atualizar informações de um item
     @PutMapping("/{id}")
     public Item atualizar(@PathVariable Long id, @RequestBody Item item) {
         item.setId(id);
         return itemRepo.save(item);
     }
 
-    // Deletar um item
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id) {
         itemRepo.deleteById(id);
