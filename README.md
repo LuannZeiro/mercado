@@ -7,3 +7,8 @@ CRIAR PERSONAGENS: POST http://localhost:8080/personagens
         "nivel": 50,
         "moedas": 150
     }
+
+---------------------------------------------------------------------
+LISTAR PERSONAGENS: GET http://localhost:8080/personagens
+---------------------------------------------------------------------
+
